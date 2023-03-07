@@ -1,4 +1,4 @@
-export default function SearchBar(onSearch) {
+export default function SearchBar({onSearch}) {
    return (
       <div>
          <input type='search' />
