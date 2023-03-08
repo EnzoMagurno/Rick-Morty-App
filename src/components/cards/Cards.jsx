@@ -1,8 +1,9 @@
 import Card from '../card/Card';
+import styles from './Cards.module.css'
 
 export default function Cards({characters}) {
    
-   return (<div>
+   return (<div className={styles.container}>
       {
          characters.map(({name,species,gender,image})=>{
             return(
