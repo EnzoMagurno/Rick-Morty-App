@@ -1,5 +1,6 @@
 .container{
-    background-color: bisque;
+    background-color: red;
+    padding: 0.5em;
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -11,11 +12,11 @@
     
 }
 
-.subtitles{
+/* .subtitles{
 
 }
 
 .image{
-
+    
 }
-
+ */
