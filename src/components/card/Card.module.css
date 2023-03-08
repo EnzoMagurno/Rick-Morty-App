@@ -1,0 +1,21 @@
+.container{
+    background-color: bisque;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonX{
+    color: red;
+    width: fit-content;
+    
+}
+
+.subtitles{
+
+}
+
+.image{
+
+}
+
