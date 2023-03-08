@@ -4,12 +4,12 @@
     width: fit-content;
     display: flex;
     flex-direction: column;
+    margin: 1em;
 }
 
 .buttonX{
     color: red;
     width: fit-content;
-    
 }
 
 /* .subtitles{
