@@ -12,8 +12,15 @@ function App() {
     fetch(`${URL_BASE}/character/${id}?key=${KEY}`)
       .then((response) => response.json())
       .then((data) => {
-        if (data.name) {
-          setCharacter((oldChars) => [...oldChars, data]);
+        if (data.id) {
+          const duplicado = characters.some(
+            (character) => character.id === data.id
+          );
+          if (duplicado) {
+            alert('El personaje ya se está mostrando');
+          } else {
+            setCharacter((oldChars) => [...oldChars, data]);
+          }
         } else {
           alert('No hay personaje con ese ID');
         }
