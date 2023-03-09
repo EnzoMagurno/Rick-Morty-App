@@ -1,12 +1,19 @@
 import React from "react";
 import SearchBar from "../searchBar/SearchBar";
 import style from './nav.module.css'
-const Nav = () =>{
-    return(
-        <div className={style.nav}>
-          <SearchBar onSearch={(characterID) => window.alert(characterID)} />
-        </div>
-    )
-}
+// import { characters,setChatacters } from "../../App";
 
+class Nav extends React.Component{
+  constructor(props){
+    super(props)
+
+  }
+  render(){
+    return(
+      <div>
+      <SearchBar onSearch={this.props.onSearch}/>
+      </div>
+    )
+  }
+}
 export default Nav
