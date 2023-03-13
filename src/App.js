@@ -6,6 +6,7 @@ import Logo from './components/logo-header/Logo';
 import { Routes, Route } from 'react-router-dom';
 import About from './components/about/About';
 import Detail from './components/detail/Detail.jsx';
+import SearchBar from './components/searchBar/SearchBar';
 function App() {
   const [characters, setCharacter] = useState([]);
   const onSearch = (id) => {
@@ -39,12 +40,18 @@ function App() {
 
   return (
     <div className="App">
-      <Nav onSearch={onSearch} />
+      <Nav />
+      <Logo />
+
       <Routes>
-        <Route path="/" element={<Logo />}></Route>
         <Route
           path="/home"
-          element={<Cards characters={characters} onClose={onClose} />}
+          element={
+            <div>
+              <SearchBar onSearch={onSearch} />
+              <Cards characters={characters} onClose={onClose} />
+            </div>
+          }
         />
         <Route path="/about" element={<About />}></Route>
         <Route path="/detail/:detailId" element={<Detail />}></Route>
