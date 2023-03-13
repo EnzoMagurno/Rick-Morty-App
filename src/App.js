@@ -1,8 +1,8 @@
 import './App.css';
 import Cards from './components/cards/Cards.jsx';
-// import characters from './data.js';
 import Nav from './components/nav/Nav';
 import { useState } from 'react';
+import Logo from './components/logo-header/Logo';
 
 function App() {
   const [characters, setCharacter] = useState([]);
@@ -37,6 +37,7 @@ function App() {
 
   return (
     <div className="App">
+      <Logo />
       <Nav onSearch={onSearch} />
       <Cards characters={characters} onClose={onClose} />
     </div>
