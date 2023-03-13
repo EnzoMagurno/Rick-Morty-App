@@ -4,3 +4,7 @@
     padding: 2em;
     display: flex;
 }
+
+.navLink{
+    color: white;
+}

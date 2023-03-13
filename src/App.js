@@ -38,15 +38,15 @@ function App() {
 
   return (
     <div className="App">
-      <Logo />
       <Nav onSearch={onSearch} />
       <Routes>
+        <Route path="/" element={<Logo />}></Route>
         <Route
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}
         />
         <Route path="/about" element={<About />}></Route>
-        <Route path="/"></Route>
+        {/* <Route path="/detail/detailId" element={<Detail/>}></Route> */}
       </Routes>
     </div>
   );
