@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Logo from './components/logo-header/Logo';
 import { Routes, Route } from 'react-router-dom';
 import About from './components/about/About';
-import Detail from './components/detail/Detail';
+import Detail from './components/detail/Detail.jsx';
 function App() {
   const [characters, setCharacter] = useState([]);
   const onSearch = (id) => {
