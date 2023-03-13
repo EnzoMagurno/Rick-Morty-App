@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Logo from './components/logo-header/Logo';
 import { Routes, Route } from 'react-router-dom';
 import About from './components/about/About';
+import Detail from './components/detail/Detail';
 function App() {
   const [characters, setCharacter] = useState([]);
   const onSearch = (id) => {
@@ -46,7 +47,7 @@ function App() {
           element={<Cards characters={characters} onClose={onClose} />}
         />
         <Route path="/about" element={<About />}></Route>
-        {/* <Route path="/detail/detailId" element={<Detail/>}></Route> */}
+        <Route path="/detail/:detailId" element={<Detail />}></Route>
       </Routes>
     </div>
   );
