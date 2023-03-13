@@ -3,7 +3,8 @@ import Cards from './components/cards/Cards.jsx';
 import Nav from './components/nav/Nav';
 import { useState } from 'react';
 import Logo from './components/logo-header/Logo';
-
+import { Routes, Route } from 'react-router-dom';
+import About from './components/about/About';
 function App() {
   const [characters, setCharacter] = useState([]);
   const onSearch = (id) => {
@@ -39,7 +40,14 @@ function App() {
     <div className="App">
       <Logo />
       <Nav onSearch={onSearch} />
-      <Cards characters={characters} onClose={onClose} />
+      <Routes>
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/"></Route>
+      </Routes>
     </div>
   );
 }
